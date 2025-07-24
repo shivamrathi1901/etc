@@ -1,0 +1,415 @@
+/* ==== Color Variables ==== */
+:root {
+  --primary: #f26722;      /* Orange */
+  --teal: #027b8a;         /* Teal */
+  --dark-blue: #133268;    /* Dark Blue */
+  --gray-bg: #f9f9f9;
+  --text: #222;
+  --white: #fff;
+  --nav-hover: #60a5fa;    /* Light blue for hover */
+  --nav-border: #374151;   /* Dark gray border for mobile nav */
+}
+
+/* ==== Reset & Basic Styles ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--gray-bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== Header Styles ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgb(1, 1, 71) ;
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #d1d5db; /* Light gray */
+  font-weight: 500;
+}
+
+/* ==== Navigation Styles ==== */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--nav-hover);
+  outline: none;
+}
+
+/* ==== Responsive Styles ==== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--nav-border);
+  }
+}
+
+/* ==== Typography ==== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h2 {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  color: var(--teal);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+h5 {
+  color: var(--dark-blue);
+  font-size: 1rem;
+}
+
+h6 {
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* ==== Buttons ==== */
+button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(242, 103, 34, 0.12);
+}
+
+button.primary:hover {
+  background: var(--dark-blue);
+}
+
+button.secondary {
+  background: var(--teal);
+}
+
+button.secondary:hover {
+  background: var(--primary);
+}
+
+/* ==== Footer ==== */
+footer {
+  background-color: var(--white);
+  color: var(--teal);
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+/* ==== Small Screens Typography Adjustments ==== */
+@media (max-width: 480px) {
+  .branding h1 {
+    font-size: 1.3rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==== Services Section ==== */
+.services-section {
+  padding: 4rem 0;
+  background: var(--gray-bg);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.service-card p {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+/* Responsive services grid */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==== Contact Section ==== */
+.contact-section {
+  padding: 4rem 0;
+  background: var(--gray-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Centered and smaller form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px; /* Reduced width */
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem; /* Reduced height */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 5px rgba(242, 103, 34, 0.3);
+}
+
+.contact-form button {
+  width: 50%; /* smaller button width */
+  margin: 0 auto; /* center button */
+}
+
+/* ==== Home Page ==== */
+.home-page {
+  background: var(--gray-bg);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, var(--dark-blue), var(--teal));
+  color: var(--white);
+  flex-wrap: wrap;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+.cta-btn {
+  background: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ff7f3e;
+}
+
+.hero-image img {
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.secondary-btn {
+  background: var(--teal);
+  color: var(--white);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: var(--primary);
+}
+
+/* Quick Services */
+.quick-services {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.quick-services h2 {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.quick-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-preview {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

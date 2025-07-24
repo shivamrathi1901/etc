@@ -1,0 +1,264 @@
+:root {
+  --blue: #17407e;
+  --orange: #ff7900;
+  --dark: #171725;
+  --light: #f8faff;
+  --white: #fff;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* HEADER/BANNER STYLES */
+header {
+  width: 100%;
+  background: rgb(1, 1, 71);
+  position: relative;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 230px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85);
+}
+
+.banner-title {
+  position: absolute;
+  left: 3%;
+  bottom: 20px;
+}
+
+.banner-title h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(23, 64, 126, 0.5);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* NAVIGATION */
+nav {
+  background: rgb(1, 1, 71) ;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 1.3rem;
+}
+
+.menu a {
+  display: block;
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 0.9rem;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  background: var(--orange);
+  color: var(--dark);
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Heading, paragraph, button styles */
+h2, h3 {
+  color: var(--blue);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1.7rem;
+}
+
+button,
+input[type="submit"],
+button[type="submit"] {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2.2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(127, 121, 0, 0.06);
+}
+
+button:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background: var(--blue);
+}
+
+.contact-form-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 24px rgba(23, 64, 126, 0.07);
+}
+
+/* CONTACT FORM */
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background: rgb(1, 1, 71) ;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 900px) {
+  main {
+    max-width: 97vw;
+    padding: 0.8rem;
+  }
+  .contact-form-section {
+    padding: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li {
+    margin: 0.2rem 0;
+  }
+  .banner img {
+    max-height: 120px;
+  }
+  .banner-title h1 {
+    font-size: 1.3rem;
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 1rem;
+  z-index: 1001;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--orange);
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: all 0.35s;
+  display: block;
+}
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--blue);
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    width: 80vw;
+    max-width: 270px;
+    box-shadow: 0 6px 18px rgba(23, 64, 126, 0.11);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  .menu.menu-active {
+    display: flex;
+  }
+  .menu li {
+    margin: 0.7rem 0;
+    text-align: right;
+  }
+}
+
+/* Hamburger animation */
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
