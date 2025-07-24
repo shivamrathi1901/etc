@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my-react-app/static/css/main.d6a92ba0.css",
-    "main.js": "/my-react-app/static/js/main.9d73bb95.js",
-    "static/js/453.96453769.chunk.js": "/my-react-app/static/js/453.96453769.chunk.js",
-    "static/media/heroImage.png": "/my-react-app/static/media/heroImage.396d3455f9dde8d6ad8a.png",
-    "static/media/logo.png": "/my-react-app/static/media/logo.f663c390a2fa96396e62.png",
-    "index.html": "/my-react-app/index.html",
-    "main.d6a92ba0.css.map": "/my-react-app/static/css/main.d6a92ba0.css.map",
-    "main.9d73bb95.js.map": "/my-react-app/static/js/main.9d73bb95.js.map",
-    "453.96453769.chunk.js.map": "/my-react-app/static/js/453.96453769.chunk.js.map"
+    "main.css": "/etc/static/css/main.d6a92ba0.css",
+    "main.js": "/etc/static/js/main.b885d7f2.js",
+    "static/js/453.96453769.chunk.js": "/etc/static/js/453.96453769.chunk.js",
+    "static/media/heroImage.png": "/etc/static/media/heroImage.396d3455f9dde8d6ad8a.png",
+    "static/media/logo.png": "/etc/static/media/logo.f663c390a2fa96396e62.png",
+    "index.html": "/etc/index.html",
+    "main.d6a92ba0.css.map": "/etc/static/css/main.d6a92ba0.css.map",
+    "main.b885d7f2.js.map": "/etc/static/js/main.b885d7f2.js.map",
+    "453.96453769.chunk.js.map": "/etc/static/js/453.96453769.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6a92ba0.css",
-    "static/js/main.9d73bb95.js"
+    "static/js/main.b885d7f2.js"
   ]
 }
