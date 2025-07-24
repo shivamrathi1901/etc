@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/etc/static/css/main.d6a92ba0.css",
-    "main.js": "/etc/static/js/main.809b610e.js",
+    "main.js": "/etc/static/js/main.daee501d.js",
     "static/js/453.27236e03.chunk.js": "/etc/static/js/453.27236e03.chunk.js",
     "static/media/heroImage.png": "/etc/static/media/heroImage.396d3455f9dde8d6ad8a.png",
     "static/media/logo.png": "/etc/static/media/logo.f663c390a2fa96396e62.png",
     "index.html": "/etc/index.html",
     "main.d6a92ba0.css.map": "/etc/static/css/main.d6a92ba0.css.map",
-    "main.809b610e.js.map": "/etc/static/js/main.809b610e.js.map",
+    "main.daee501d.js.map": "/etc/static/js/main.daee501d.js.map",
     "453.27236e03.chunk.js.map": "/etc/static/js/453.27236e03.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6a92ba0.css",
-    "static/js/main.809b610e.js"
+    "static/js/main.daee501d.js"
   ]
 }
