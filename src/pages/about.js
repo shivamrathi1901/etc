@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 export default function About() {
     return (
         <div>
@@ -22,7 +24,9 @@ export default function About() {
 
                 <p>Let us take the complexity out of your technology, so you can focus on creating exceptional events and fostering thriving associations.
                     Connect with EasyTechConnect today and experience the difference that clarity and expertise can make.</p>
-                <a href="contact.html"><button class="primary">Get Started</button></a>
+                <Link to="/contact" className="primary cta-btn">
+                    Get Started! <FaArrowRight />
+                </Link>
             </main>
         </div>
     );
